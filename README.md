@@ -136,6 +136,7 @@ IoLytics/
 ├── API_DOCUMENTATION.md     # Complete API Reference
 ├── ARCHITECTURE.md          # Program's architecture guide
 ├── QUICK_START.md           # Quick start guide
+├── DIAGRAMS.md              # All the program's diagrams
 └── README.md                # This file
 ```
 

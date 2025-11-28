@@ -1,7 +1,4 @@
 # IoLytics UML Diagrams
-
-Copy and paste these Mermaid diagram codes into [Mermaid Live Editor](https://mermaid.live) to generate visual diagrams.
-
 ---
 
 ## Use Case Diagram
@@ -193,7 +190,7 @@ flowchart TD
     Start --> Mount[Component Mounts]
     Mount --> InitState[Initialize State]
     InitState --> SetLoading[Set Loading = true]
-    SetLoading --> FetchDevices[Call deviceAPI.getAll()]
+    SetLoading --> FetchDevices["Call deviceAPI.getAll()"]
     
     FetchDevices --> CheckParams{Query Parameters?}
     CheckParams -->|Yes| AddParams[Add params to request]
@@ -850,21 +847,3 @@ flowchart TD
     style CheckResponse fill:#ffe66d
     style UserAction fill:#ffe66d
 ```
-
----
-
-## How to Use
-
-1. Go to [Mermaid Live Editor](https://mermaid.live)
-2. Copy any diagram code above (the code between the ```mermaid blocks)
-3. Paste it into the editor
-4. The diagram will render automatically
-5. Export as PNG, SVG, or copy the code
-
-## Diagram Types
-
-- **Use Case Diagram**: Shows all use cases and their relationships
-- **Sequence Diagrams**: Show the interaction between components over time
-- **Activity Diagrams**: Show the flow of control and decision points
-
-Each use case has both a sequence diagram (showing interactions) and an activity diagram (showing the flow of activities).
