@@ -32,7 +32,7 @@ Platform ini terdiri dari frontend React dashboard dan backend Node.js / Express
 ### Dashboard
 - **Real-time Monitoring**: live sensor readings diperbarui setiap 3 detik
 - **Device Status Overview**: informasi device online/offline
-- **Environmental Metrics**: Ttemperature, kondisi cuaca, dll.
+- **Environmental Metrics**: Temperature, kondisi cuaca, dll.
 - **Energy Monitoring**: tracking konsumsi daya real-time
 - **Activity Logs**: event device terbaru dan notifikasi
 - **Interactive Charts**: tren 7-hari untuk temperature, RFID activity, energy consumption
