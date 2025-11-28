@@ -703,7 +703,7 @@ sequenceDiagram
 flowchart TD
     Start([User Clicks Create Log])
     Start --> ShowForm[Show Log Form]
-    ShowForm --> UserInput[User Enters Data:<br/>- Severity<br/>- Device<br/>- Message]
+    ShowForm --> UserInput["User Enters Data:<br/>- Severity<br/>- Device<br/>- Message"]
 
     UserInput --> ClickSubmit{User Clicks<br/>Submit?}
     ClickSubmit -->|Cancel| End([Cancel])
@@ -736,7 +736,8 @@ flowchart TD
     ShowServerError --> End
 
     ProcessLog --> ReadFile[Read logs.json]
-    ReadFile --> CreateLog[Create Log Object:<br/>- id: log_timestamp<br/>- timestamp: now()<br/>- severity, device, message]
+
+    ReadFile --> CreateLog["Create Log Object:<br/>- id: log_timestamp<br/>- timestamp: now<br/>- severity<br/>- device<br/>- message"]
 
     CreateLog --> PrependLog[Prepend to logs array]
     PrependLog --> WriteFile[Write to logs.json]
