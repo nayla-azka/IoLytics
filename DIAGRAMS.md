@@ -270,17 +270,17 @@ sequenceDiagram
 flowchart TD
     Start([User Clicks Device])
     Start --> GetID[Get Device ID]
-    GetID --> CallAPI[Call deviceAPI.getById(id)]
-    CallAPI --> SendRequest[Send GET /api/devices/:id]
+    GetID --> CallAPI["Call deviceAPI.getById(id)"]
+    CallAPI --> SendRequest["Send GET /api/devices/:id"]
     SendRequest --> WaitResponse[Wait for Response]
     
     WaitResponse --> CheckResponse{Response<br/>Status?}
     CheckResponse -->|200 OK| ParseData[Parse Device Data]
-    CheckResponse -->|404| ShowNotFound[Show 'Device Not Found']
+    CheckResponse -->|404| ShowNotFound["Show 'Device Not Found'"]
     CheckResponse -->|500| ShowError[Show Error Message]
     
     ParseData --> DisplayDetails[Display Device Details]
-    DisplayDetails --> ShowInfo[Show Device Information:<br/>- Name, Type, Location<br/>- Status, Last Active<br/>- Readings Data]
+    DisplayDetails --> ShowInfo["Show Device Information:<br/>- Name, Type, Location<br/>- Status, Last Active<br/>- Readings Data"]
     ShowInfo --> End([End])
     
     ShowNotFound --> End
@@ -343,22 +343,22 @@ flowchart TD
     
     GetStatus --> ValidateStatus{Status Valid?}
     ValidateStatus -->|No| ShowError[Show Validation Error]
-    ValidateStatus -->|Yes| CallAPI[Call deviceAPI.updateStatus(id, status)]
+    ValidateStatus -->|Yes| CallAPI["Call deviceAPI.updateStatus(id, status)"]
     
     ShowError --> End
     
-    CallAPI --> SendRequest[Send POST Request]
+    CallAPI --> SendRequest["Send POST Request"]
     SendRequest --> WaitResponse[Wait for Response]
     WaitResponse --> CheckResponse{Response<br/>Successful?}
     
-    CheckResponse -->|404| ShowNotFound[Show 'Device Not Found']
+    CheckResponse -->|404| ShowNotFound["Show 'Device Not Found'"]
     CheckResponse -->|500| ShowServerError[Show Server Error]
     CheckResponse -->|200| ParseResponse[Parse Updated Device]
     
     ShowNotFound --> End
     ShowServerError --> End
     
-    ParseResponse --> UpdateFile[Backend: Update devices.json]
+    ParseResponse --> UpdateFile["Backend: Update devices.json"]
     UpdateFile --> UpdateState[Update Component State]
     UpdateState --> ReRender[Re-render Component]
     ReRender --> ShowSuccess[Show Success Message]
@@ -423,9 +423,9 @@ flowchart TD
     Start --> Mount[Component Mounts]
     Mount --> InitState[Initialize State]
     InitState --> SetLoading[Set Loading = true]
-    SetLoading --> FetchAnalytics[Call analyticsAPI.getData()]
+    SetLoading --> FetchAnalytics["Call analyticsAPI.getData()"]
     
-    FetchAnalytics --> SendRequest[Send GET /api/analytics]
+    FetchAnalytics --> SendRequest["Send GET /api/analytics"]
     SendRequest --> WaitResponse[Wait for Response]
     WaitResponse --> CheckResponse{Response<br/>Successful?}
     
@@ -435,20 +435,20 @@ flowchart TD
     HandleError --> ShowError[Display Error]
     ShowError --> End([End])
     
-    ParseData --> ExtractData[Extract Data:<br/>- Temperature trends<br/>- Humidity data<br/>- RFID scans<br/>- Energy consumption<br/>- Soil moisture]
+    ParseData --> ExtractData["Extract Data:<br/>- Temperature trends<br/>- Humidity data<br/>- RFID scans<br/>- Energy consumption<br/>- Soil moisture"]
     
     ExtractData --> UpdateState[Update Analytics State]
     UpdateState --> SetLoadingFalse[Set Loading = false]
-    SetLoadingFalse --> RenderCharts[Render Charts with Recharts]
+    SetLoadingFalse --> RenderCharts["Render Charts with Recharts"]
     
-    RenderCharts --> DisplayCharts[Display:<br/>- Temperature Line Chart<br/>- RFID Bar Chart<br/>- Energy Line Chart<br/>- Humidity Chart]
+    RenderCharts --> DisplayCharts["Display:<br/>- Temperature Line Chart<br/>- RFID Bar Chart<br/>- Energy Line Chart<br/>- Humidity Chart"]
     
     DisplayCharts --> WaitUserAction[Wait for User Action]
     
     WaitUserAction --> UserAction{User Action?}
-    UserAction -->|View Device Types| FetchTypes[Fetch Device Types]
-    UserAction -->|View RFID Stats| FetchRFID[Fetch RFID Stats]
-    UserAction -->|View Energy Stats| FetchEnergy[Fetch Energy Stats]
+    UserAction -->|View Device Types| FetchTypes["Fetch Device Types"]
+    UserAction -->|View RFID Stats| FetchRFID["Fetch RFID Stats"]
+    UserAction -->|View Energy Stats| FetchEnergy["Fetch Energy Stats"]
     UserAction -->|None| WaitUserAction
     
     FetchTypes --> UpdateTypes[Update UI with Types]
@@ -504,9 +504,9 @@ flowchart TD
     Start --> Mount[Component Mounts]
     Mount --> InitState[Initialize State]
     InitState --> SetLoading[Set Loading = true]
-    SetLoading --> FetchLogs[Call logsAPI.getAll()]
+    SetLoading --> FetchLogs["Call logsAPI.getAll()"]
     
-    FetchLogs --> SendRequest[Send GET /api/logs]
+    FetchLogs --> SendRequest["Send GET /api/logs"]
     SendRequest --> WaitResponse[Wait for Response]
     WaitResponse --> CheckResponse{Response<br/>Successful?}
     
@@ -516,14 +516,14 @@ flowchart TD
     HandleError --> ShowError[Display Error]
     ShowError --> End([End])
     
-    ParseData --> SortLogs[Backend: Sort by timestamp]
+    ParseData --> SortLogs["Backend: Sort by timestamp"]
     SortLogs --> UpdateState[Update Logs State]
     UpdateState --> SetLoadingFalse[Set Loading = false]
     SetLoadingFalse --> RenderList[Render Log List]
     
-    RenderList --> FormatLogs[Format Each Log:<br/>- Severity indicator<br/>- Timestamp<br/>- Device name<br/>- Message]
+    RenderList --> FormatLogs["Format Each Log:<br/>- Severity indicator<br/>- Timestamp<br/>- Device name<br/>- Message"]
     
-    FormatLogs --> DisplayLogs[Display Logs:<br/>- Info: Green<br/>- Warning: Yellow<br/>- Error: Red]
+    FormatLogs --> DisplayLogs["Display Logs:<br/>- Info: Green<br/>- Warning: Yellow<br/>- Error: Red"]
     
     DisplayLogs --> End
     
@@ -608,13 +608,13 @@ flowchart TD
     GetSearch --> BuildParams
     GetLimit --> BuildParams
     
-    BuildParams --> CallAPI[Call logsAPI.getAll(params)]
-    CallAPI --> SendRequest[Send GET /api/logs with params]
+    BuildParams --> CallAPI["Call logsAPI.getAll(params)"]
+    CallAPI --> SendRequest["Send GET /api/logs with params"]
     SendRequest --> WaitResponse[Wait for Response]
     
     WaitResponse --> CheckResponse{Response<br/>Successful?}
     CheckResponse -->|No| HandleError[Handle Error]
-    CheckResponse -->|Yes| ProcessFilters[Backend: Apply Filters]
+    CheckResponse -->|Yes| ProcessFilters["Backend: Apply Filters"]
     
     HandleError --> ShowError[Show Error]
     ShowError --> End([End])
@@ -704,50 +704,50 @@ flowchart TD
     Start([User Clicks Create Log])
     Start --> ShowForm[Show Log Form]
     ShowForm --> UserInput[User Enters Data:<br/>- Severity<br/>- Device<br/>- Message]
-    
+
     UserInput --> ClickSubmit{User Clicks<br/>Submit?}
     ClickSubmit -->|Cancel| End([Cancel])
     ClickSubmit -->|Submit| ValidateInput[Validate Input]
-    
+
     ValidateInput --> CheckSeverity{Severity<br/>Valid?}
     CheckSeverity -->|No| ShowSeverityError[Show Severity Error]
     CheckSeverity -->|Yes| CheckDevice{Device<br/>Valid?}
-    
+
     ShowSeverityError --> End
-    
+
     CheckDevice -->|No| ShowDeviceError[Show Device Error]
     CheckDevice -->|Yes| CheckMessage{Message<br/>Valid?}
-    
+
     ShowDeviceError --> End
-    
+
     CheckMessage -->|No| ShowMessageError[Show Message Error]
     CheckMessage -->|Yes| BuildLogData[Build Log Data Object]
-    
+
     ShowMessageError --> End
-    
-    BuildLogData --> CallAPI[Call logsAPI.addLog(logData)]
+
+    BuildLogData --> CallAPI["Call logsAPI.addLog(logData)"]
     CallAPI --> SendRequest[Send POST /api/logs]
     SendRequest --> WaitResponse[Wait for Response]
-    
+
     WaitResponse --> CheckResponse{Response<br/>Successful?}
     CheckResponse -->|500| ShowServerError[Show Server Error]
     CheckResponse -->|201| ProcessLog[Backend: Process Log]
-    
+
     ShowServerError --> End
-    
+
     ProcessLog --> ReadFile[Read logs.json]
     ReadFile --> CreateLog[Create Log Object:<br/>- id: log_timestamp<br/>- timestamp: now()<br/>- severity, device, message]
-    
+
     CreateLog --> PrependLog[Prepend to logs array]
     PrependLog --> WriteFile[Write to logs.json]
     WriteFile --> ReturnLog[Return Created Log]
-    
+
     ReturnLog --> UpdateState[Update Logs State]
     UpdateState --> ReRender[Re-render Log List]
     ReRender --> ShowSuccess[Show Success Message]
     ShowSuccess --> ClearForm[Clear Form]
     ClearForm --> End
-    
+
     style Start fill:#61dafb
     style End fill:#ff6b6b
     style ClickSubmit fill:#ffe66d
@@ -807,7 +807,7 @@ sequenceDiagram
 ```mermaid
 flowchart TD
     Start([User Views Live Data])
-    Start --> CallAPI[Call liveAPI.getData()]
+    Start --> CallAPI["Call liveAPI.getData()"]
     CallAPI --> SendRequest[Send GET /api/live]
     SendRequest --> WaitResponse[Wait for Response]
     
@@ -836,7 +836,7 @@ flowchart TD
     UserAction -->|View Device Data| GetDeviceData[Get Device-Specific Data]
     UserAction -->|None| StartInterval
     
-    GetDeviceData --> CallDeviceAPI[Call liveAPI.getDeviceData(id)]
+    GetDeviceData --> CallDeviceAPI["Call liveAPI.getDeviceData(id)"]
     CallDeviceAPI --> SendDeviceRequest[Send GET /api/live/:deviceId]
     SendDeviceRequest --> GenerateDeviceData[Generate Device Data]
     GenerateDeviceData --> DisplayDeviceData[Display Device Readings]
