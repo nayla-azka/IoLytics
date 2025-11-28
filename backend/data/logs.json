@@ -1,0 +1,128 @@
+[
+  {
+    "id": "log_1764300986018",
+    "timestamp": "2025-11-28T03:36:26.018Z",
+    "message": "kad",
+    "severity": "warning",
+    "device": "aslkd"
+  },
+  {
+    "id": "log_1764300838591",
+    "timestamp": "2025-11-28T03:33:58.591Z",
+    "message": "aslkdsna",
+    "severity": "warning",
+    "device": "aslkdm"
+  },
+  {
+    "id": "log_1764300331524",
+    "timestamp": "2025-11-28T03:25:31.524Z",
+    "message": "dmdsd",
+    "severity": "info",
+    "device": "sdaa"
+  },
+  {
+    "id": "log_001",
+    "timestamp": "2025-01-11T14:30:15Z",
+    "severity": "info",
+    "device": "rfid_001",
+    "message": "Card CARD-8472 scanned successfully - Access granted"
+  },
+  {
+    "id": "log_002",
+    "timestamp": "2025-01-11T14:28:42Z",
+    "severity": "info",
+    "device": "light_001",
+    "message": "Brightness adjusted to 75% via mobile app"
+  },
+  {
+    "id": "log_003",
+    "timestamp": "2025-01-11T14:25:10Z",
+    "severity": "warning",
+    "device": "plant_002",
+    "message": "Soil moisture low (32%) - Watering scheduled in 6 hours"
+  },
+  {
+    "id": "log_004",
+    "timestamp": "2025-01-11T14:20:33Z",
+    "severity": "info",
+    "device": "outlet_002",
+    "message": "Device turned OFF automatically (scheduled)"
+  },
+  {
+    "id": "log_005",
+    "timestamp": "2025-01-11T14:15:58Z",
+    "severity": "warning",
+    "device": "scale_002",
+    "message": "Battery level critical (15%) - Replacement recommended"
+  },
+  {
+    "id": "log_006",
+    "timestamp": "2025-01-11T14:10:22Z",
+    "severity": "error",
+    "device": "scale_002",
+    "message": "Device disconnected - Last known battery: 15%"
+  },
+  {
+    "id": "log_007",
+    "timestamp": "2025-01-11T14:05:47Z",
+    "severity": "info",
+    "device": "weather_001",
+    "message": "UV Index high (7) - Sun protection recommended"
+  },
+  {
+    "id": "log_008",
+    "timestamp": "2025-01-11T14:00:11Z",
+    "severity": "info",
+    "device": "rfid_002",
+    "message": "Card CARD-3291 scanned - Access granted to 2nd Floor"
+  },
+  {
+    "id": "log_009",
+    "timestamp": "2025-01-11T13:55:36Z",
+    "severity": "warning",
+    "device": "outlet_001",
+    "message": "Power consumption elevated (616W) - Check connected devices"
+  },
+  {
+    "id": "log_010",
+    "timestamp": "2025-01-11T13:50:58Z",
+    "severity": "info",
+    "device": "plant_001",
+    "message": "Automatic watering completed - 250ml dispensed"
+  },
+  {
+    "id": "log_011",
+    "timestamp": "2025-01-11T13:45:12Z",
+    "severity": "info",
+    "device": "scale_001",
+    "message": "Weight measurement recorded: 45.8 kg"
+  },
+  {
+    "id": "log_012",
+    "timestamp": "2025-01-11T13:40:25Z",
+    "severity": "warning",
+    "device": "rfid_002",
+    "message": "Signal strength decreased to 78% - Check antenna"
+  },
+  {
+    "id": "log_013",
+    "timestamp": "2025-01-11T13:35:44Z",
+    "severity": "info",
+    "device": "light_002",
+    "message": "Light turned ON automatically (motion detected)"
+  },
+  {
+    "id": "log_014",
+    "timestamp": "2025-01-11T13:30:07Z",
+    "severity": "error",
+    "device": "plant_002",
+    "message": "Water reservoir low (45%) - Refill required soon"
+  },
+  {
+    "id": "log_015",
+    "timestamp": "2025-01-11T13:25:31Z",
+    "severity": "info",
+    "device": "weather_002",
+    "message": "Weather data updated - Temperature: 29.2°C, Humidity: 63%"
+  }
+]

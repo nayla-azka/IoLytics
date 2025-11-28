@@ -1,0 +1,176 @@
+[
+  {
+    "id": "rfid_001",
+    "name": "Main Entrance RFID Reader",
+    "type": "rfid_reader",
+    "location": "Building A - Main Entrance",
+    "status": "offline",
+    "lastActive": "2025-11-28T03:39:29.457Z",
+    "readings": {
+      "fullName": "John Doe",
+      "macAddress": "00:1B:44:11:3A:B7",
+      "time": "14:28:15",
+      "date": "2025-01-11",
+      "school": "Engineering",
+      "id": "STU-2025-001"
+    }
+  },
+  {
+    "id": "rfid_002",
+    "name": "Office Floor RFID Reader",
+    "type": "rfid_reader",
+    "location": "Building A - 2nd Floor",
+    "status": "online",
+    "lastActive": "2025-01-11T14:29:30Z",
+    "readings": {
+      "fullName": "Jane Smith",
+      "macAddress": "00:1B:44:11:3A:B8",
+      "time": "14:25:42",
+      "date": "2025-01-11",
+      "school": "Business",
+      "id": "STF-2025-042"
+    }
+  },
+  {
+    "id": "light_001",
+    "name": "Conference Room Smart Light",
+    "type": "smart_light",
+    "location": "Building A - Conference Room",
+    "status": "online",
+    "lastActive": "2025-01-11T14:31:00Z",
+    "readings": {
+      "bulbStatus": "On",
+      "voltage": 220,
+      "current": 0.05,
+      "power": 11,
+      "energy": 12.5,
+      "frequency": 50
+    }
+  },
+  {
+    "id": "light_002",
+    "name": "Office Smart Light",
+    "type": "smart_light",
+    "location": "Building A - Open Office",
+    "status": "online",
+    "lastActive": "2025-01-11T14:30:45Z",
+    "readings": {
+      "bulbStatus": "On",
+      "voltage": 220,
+      "current": 0.07,
+      "power": 15.4,
+      "energy": 15.2,
+      "frequency": 50
+    }
+  },
+  {
+    "id": "outlet_001",
+    "name": "Workstation Smart Outlet",
+    "type": "smart_outlet",
+    "location": "Building A - Desk Area",
+    "status": "online",
+    "lastActive": "2025-01-11T14:30:20Z",
+    "readings": {
+      "outletStatus": "On",
+      "voltage": 220,
+      "current": 2.8,
+      "power": 616,
+      "energy": 4.85,
+      "frequency": 50
+    }
+  },
+  {
+    "id": "outlet_002",
+    "name": "Kitchen Smart Outlet",
+    "type": "smart_outlet",
+    "location": "Building A - Kitchen",
+    "status": "online",
+    "lastActive": "2025-01-11T14:29:55Z",
+    "readings": {
+      "outletStatus": "Off",
+      "voltage": 220,
+      "current": 0,
+      "power": 0,
+      "energy": 1.25,
+      "frequency": 50
+    }
+  },
+  {
+    "id": "plant_001",
+    "name": "Reception Area Plant Monitor",
+    "type": "plant_watering",
+    "location": "Building A - Reception",
+    "status": "online",
+    "lastActive": "2025-01-11T14:31:10Z",
+    "readings": {
+      "datetime": "2025-01-11T14:31:10Z",
+      "waterpumpStatus": "Off",
+      "soilMoistureStatus": "Moist",
+      "humidity": 62
+    }
+  },
+  {
+    "id": "plant_002",
+    "name": "Garden Plant Monitor",
+    "type": "plant_watering",
+    "location": "Building A - Rooftop Garden",
+    "status": "online",
+    "lastActive": "2025-01-11T14:30:05Z",
+    "readings": {
+      "datetime": "2025-01-11T14:30:05Z",
+      "waterpumpStatus": "On",
+      "soilMoistureStatus": "Dry",
+      "humidity": 58
+    }
+  },
+  {
+    "id": "weather_001",
+    "name": "Rooftop Weather Station",
+    "type": "weather_sensor",
+    "location": "Building A - Rooftop",
+    "status": "online",
+    "lastActive": "2025-01-11T14:31:25Z",
+    "readings": {
+      "datetime": "2025-01-11T14:31:25Z",
+      "weather": "Sunny",
+      "temperature": 28.5
+    }
+  },
+  {
+    "id": "weather_002",
+    "name": "Parking Area Weather Station",
+    "type": "weather_sensor",
+    "location": "Building A - Parking Lot",
+    "status": "online",
+    "lastActive": "2025-01-11T14:30:50Z",
+    "readings": {
+      "datetime": "2025-01-11T14:30:50Z",
+      "weather": "Cloudy",
+      "temperature": 29.2
+    }
+  },
+  {
+    "id": "scale_001",
+    "name": "Warehouse Weight Scale",
+    "type": "weight_scale",
+    "location": "Building B - Warehouse",
+    "status": "online",
+    "lastActive": "2025-01-11T14:29:40Z",
+    "readings": {
+      "datetime": "2025-01-11T14:29:40Z",
+      "measurement": 45.8
+    }
+  },
+  {
+    "id": "scale_002",
+    "name": "Shipping Weight Scale",
+    "type": "weight_scale",
+    "location": "Building B - Shipping Area",
+    "status": "offline",
+    "lastActive": "2025-01-11T10:15:00Z",
+    "readings": {
+      "datetime": "2025-01-11T10:15:00Z",
+      "measurement": 12.3
+    }
+  }
+]
