@@ -21,7 +21,6 @@ IoLytics adalah solusi full-stack untuk monitoring IoT yang memungkinkan penggun
 - Memantau banyak IoT devices secara real-time
 - Melihat analytics dan trends
 - Memantau status dan health device
-- Mengelola konfigurasi device
 - Melihat activity logs
 - Menganalisis konsumsi energi
 - Monitoring kondisi lingkungan
